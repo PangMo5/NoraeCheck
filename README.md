@@ -1,0 +1,2 @@
+# NoraeCheck
+Korean Karaoke Helper
