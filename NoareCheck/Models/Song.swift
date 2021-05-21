@@ -9,13 +9,13 @@ import Foundation
 import Kodable
 
 struct Song: Codable, Hashable {
-    var no: String
-    var brand: Brand
-    var title: String
-    var singer: String
-    var composer: String
-    var lyricist: String
-    var release: String
+    var no: String?
+    var brand: Brand?
+    var title: String?
+    var singer: String?
+    var composer: String?
+    var lyricist: String?
+    @CodableDate(.format("yyyy-MM-dd")) var release: Date?
 }
 
 extension Song {

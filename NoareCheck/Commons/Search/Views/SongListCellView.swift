@@ -13,8 +13,17 @@ struct SongListCellView: View {
     var song: Song
 
     var body: some View {
-        VStack {
-            Text(song.title)
+        HStack(spacing: 16) {
+            Text(song.no ?? "")
+                .font(.system(size: 20, weight: .bold, design: .rounded))
+            VStack(alignment: .leading) {
+                Text(song.title ?? "")
+                    .font(.body)
+                Text(song.singer ?? "")
+                    .foregroundColor(.gray)
+                    .font(.body)
+            }
         }
+        .padding(.vertical)
     }
 }

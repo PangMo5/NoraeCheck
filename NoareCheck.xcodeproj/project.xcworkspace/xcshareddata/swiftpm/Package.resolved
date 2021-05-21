@@ -29,15 +29,6 @@
         }
       },
       {
-        "package": "Kingfisher",
-        "repositoryURL": "https://github.com/onevcat/Kingfisher",
-        "state": {
-          "branch": null,
-          "revision": "44450a8f564d7c0165f736ba2250649ff8d3e556",
-          "version": "6.3.0"
-        }
-      },
-      {
         "package": "Kodable",
         "repositoryURL": "https://github.com/JARMourato/Kodable",
         "state": {
@@ -53,6 +44,15 @@
           "branch": null,
           "revision": "e5a28fb62dd5ff4e17b7025643366550044a40b0",
           "version": "15.0.0-alpha.1"
+        }
+      },
+      {
+        "package": "QuickLayout",
+        "repositoryURL": "https://github.com/huri000/QuickLayout",
+        "state": {
+          "branch": null,
+          "revision": "6be62decbe508d8fc8f9dbafc349d05bab03c38b",
+          "version": "3.0.1"
         }
       },
       {
@@ -83,6 +83,15 @@
         }
       },
       {
+        "package": "SwiftEntryKit",
+        "repositoryURL": "https://github.com/huri000/SwiftEntryKit",
+        "state": {
+          "branch": null,
+          "revision": "c2d42574e4fe4e1f9719843f35add7922942a16b",
+          "version": "1.2.7"
+        }
+      },
+      {
         "package": "SwifterSwift",
         "repositoryURL": "https://github.com/SwifterSwift/SwifterSwift",
         "state": {
@@ -98,6 +107,15 @@
           "branch": null,
           "revision": "e0fd9ff48354a447d5dccdb4b485a69b63688e48",
           "version": "0.0.6"
+        }
+      },
+      {
+        "package": "SwiftyUserDefaults",
+        "repositoryURL": "https://github.com/sunshinejr/SwiftyUserDefaults",
+        "state": {
+          "branch": null,
+          "revision": "f66bcd04088582c8fbb5cb8554d577e303bae396",
+          "version": "5.3.0"
         }
       },
       {

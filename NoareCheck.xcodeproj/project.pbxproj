@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62258C8226577DB200E1BE46 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62258C8126577DB200E1BE46 /* Common.swift */; };
+		62258C8526577EE400E1BE46 /* Moya+AnyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62258C8426577EE400E1BE46 /* Moya+AnyPublisher.swift */; };
+		62258C8826577F4F00E1BE46 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = 62258C8726577F4F00E1BE46 /* SwiftEntryKit */; };
+		62258C8B26577F9D00E1BE46 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 62258C8A26577F9D00E1BE46 /* SwiftyUserDefaults */; };
+		62258C8D265780FA00E1BE46 /* SwiftEntryKit++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62258C8C265780FA00E1BE46 /* SwiftEntryKit++.swift */; };
+		62258C8F265781CE00E1BE46 /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62258C8E265781CE00E1BE46 /* Occupiable.swift */; };
 		622C46FE264FD032001AA0D5 /* NoareCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C46FD264FD032001AA0D5 /* NoareCheckApp.swift */; };
 		622C4700264FD032001AA0D5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C46FF264FD032001AA0D5 /* SplashView.swift */; };
 		622C4702264FD033001AA0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622C4701264FD033001AA0D5 /* Assets.xcassets */; };
@@ -15,7 +21,6 @@
 		622C4711264FD13F001AA0D5 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 622C4710264FD13F001AA0D5 /* SwiftUIX */; };
 		622C4714264FD174001AA0D5 /* CombineExt in Frameworks */ = {isa = PBXBuildFile; productRef = 622C4713264FD174001AA0D5 /* CombineExt */; };
 		62A043FA264FD25600F67617 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 62A043F9264FD25600F67617 /* SwifterSwift */; };
-		62A043FD264FD27000F67617 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 62A043FC264FD27000F67617 /* Kingfisher */; };
 		62A04400264FD28600F67617 /* Kodable in Frameworks */ = {isa = PBXBuildFile; productRef = 62A043FF264FD28600F67617 /* Kodable */; };
 		62A04406264FD31A00F67617 /* ServerEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A04405264FD31A00F67617 /* ServerEnvironment.swift */; };
 		62A04408264FD45200F67617 /* KaraokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62A04407264FD45200F67617 /* KaraokeAPI.swift */; };
@@ -30,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62258C8126577DB200E1BE46 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		62258C8426577EE400E1BE46 /* Moya+AnyPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+AnyPublisher.swift"; sourceTree = "<group>"; };
+		62258C8C265780FA00E1BE46 /* SwiftEntryKit++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftEntryKit++.swift"; sourceTree = "<group>"; };
+		62258C8E265781CE00E1BE46 /* Occupiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupiable.swift; sourceTree = "<group>"; };
 		622C46FA264FD032001AA0D5 /* NoareCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoareCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		622C46FD264FD032001AA0D5 /* NoareCheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoareCheckApp.swift; sourceTree = "<group>"; };
 		622C46FF264FD032001AA0D5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -53,18 +62,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				622C470E264FD125001AA0D5 /* Moya in Frameworks */,
+				62258C8826577F4F00E1BE46 /* SwiftEntryKit in Frameworks */,
 				62A043FA264FD25600F67617 /* SwifterSwift in Frameworks */,
 				622C4714264FD174001AA0D5 /* CombineExt in Frameworks */,
 				62A04420264FD92900F67617 /* CombineMoya in Frameworks */,
 				62A04400264FD28600F67617 /* Kodable in Frameworks */,
 				622C4711264FD13F001AA0D5 /* SwiftUIX in Frameworks */,
-				62A043FD264FD27000F67617 /* Kingfisher in Frameworks */,
+				62258C8B26577F9D00E1BE46 /* SwiftyUserDefaults in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62258C8326577EDB00E1BE46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62258C8426577EE400E1BE46 /* Moya+AnyPublisher.swift */,
+				62258C8C265780FA00E1BE46 /* SwiftEntryKit++.swift */,
+				62258C8E265781CE00E1BE46 /* Occupiable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		622C46F1264FD032001AA0D5 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +105,7 @@
 		622C46FC264FD032001AA0D5 /* NoareCheck */ = {
 			isa = PBXGroup;
 			children = (
+				62258C8326577EDB00E1BE46 /* Extensions */,
 				62A04417264FD64F00F67617 /* Models */,
 				62A04404264FD30A00F67617 /* API */,
 				62A04403264FD2FA00F67617 /* Shared */,
@@ -202,6 +223,7 @@
 			children = (
 				62A04418264FD65600F67617 /* Brand.swift */,
 				62A0441A264FD6DA00F67617 /* Song.swift */,
+				62258C8126577DB200E1BE46 /* Common.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,9 +289,10 @@
 				622C4710264FD13F001AA0D5 /* SwiftUIX */,
 				622C4713264FD174001AA0D5 /* CombineExt */,
 				62A043F9264FD25600F67617 /* SwifterSwift */,
-				62A043FC264FD27000F67617 /* Kingfisher */,
 				62A043FF264FD28600F67617 /* Kodable */,
 				62A0441F264FD92900F67617 /* CombineMoya */,
+				62258C8726577F4F00E1BE46 /* SwiftEntryKit */,
+				62258C8A26577F9D00E1BE46 /* SwiftyUserDefaults */,
 			);
 			productName = NoareCheck;
 			productReference = 622C46FA264FD032001AA0D5 /* NoareCheck.app */;
@@ -303,8 +326,9 @@
 				622C470F264FD13F001AA0D5 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
 				622C4712264FD174001AA0D5 /* XCRemoteSwiftPackageReference "CombineExt" */,
 				62A043F8264FD25600F67617 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
-				62A043FB264FD27000F67617 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				62A043FE264FD28600F67617 /* XCRemoteSwiftPackageReference "Kodable" */,
+				62258C8626577F4F00E1BE46 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+				62258C8926577F9D00E1BE46 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
 			);
 			productRefGroup = 622C46FB264FD032001AA0D5 /* Products */;
 			projectDirPath = "";
@@ -336,13 +360,17 @@
 				62A0441B264FD6DA00F67617 /* Song.swift in Sources */,
 				622C4700264FD032001AA0D5 /* SplashView.swift in Sources */,
 				62A04422264FD94E00F67617 /* AppAssets.swift in Sources */,
+				62258C8226577DB200E1BE46 /* Common.swift in Sources */,
+				62258C8F265781CE00E1BE46 /* Occupiable.swift in Sources */,
 				62A04419264FD65600F67617 /* Brand.swift in Sources */,
 				62A0442A264FE10200F67617 /* SongListCellView.swift in Sources */,
 				62A04428264FDF5500F67617 /* SplashViewModel.swift in Sources */,
+				62258C8526577EE400E1BE46 /* Moya+AnyPublisher.swift in Sources */,
 				622C46FE264FD032001AA0D5 /* NoareCheckApp.swift in Sources */,
 				62A04406264FD31A00F67617 /* ServerEnvironment.swift in Sources */,
 				62A04408264FD45200F67617 /* KaraokeAPI.swift in Sources */,
 				62A04415264FD63200F67617 /* SearchListContainerView.swift in Sources */,
+				62258C8D265780FA00E1BE46 /* SwiftEntryKit++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +561,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		62258C8626577F4F00E1BE46 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huri000/SwiftEntryKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.7;
+			};
+		};
+		62258C8926577F9D00E1BE46 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.0;
+			};
+		};
 		622C470C264FD125001AA0D5 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -565,14 +609,6 @@
 				minimumVersion = 5.2.0;
 			};
 		};
-		62A043FB264FD27000F67617 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.3.0;
-			};
-		};
 		62A043FE264FD28600F67617 /* XCRemoteSwiftPackageReference "Kodable" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JARMourato/Kodable";
@@ -584,6 +620,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		62258C8726577F4F00E1BE46 /* SwiftEntryKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62258C8626577F4F00E1BE46 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
+			productName = SwiftEntryKit;
+		};
+		62258C8A26577F9D00E1BE46 /* SwiftyUserDefaults */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62258C8926577F9D00E1BE46 /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
+			productName = SwiftyUserDefaults;
+		};
 		622C470D264FD125001AA0D5 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 622C470C264FD125001AA0D5 /* XCRemoteSwiftPackageReference "Moya" */;
@@ -603,11 +649,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 62A043F8264FD25600F67617 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
 			productName = SwifterSwift;
-		};
-		62A043FC264FD27000F67617 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 62A043FB264FD27000F67617 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
 		};
 		62A043FF264FD28600F67617 /* Kodable */ = {
 			isa = XCSwiftPackageProductDependency;

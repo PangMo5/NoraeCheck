@@ -13,10 +13,30 @@ struct SearchListContainerView: View {
     var viewModel = SearchListContainerViewModel()
 
     var body: some View {
-        VStack {
-            TextField("검색어를 입력해주세요.", text: $viewModel.searchText)
-            List(viewModel.songList, id: \.self) { song in
-                SongListCellView(song: song)
+        ZStack {
+            VStack {
+                Group {
+                    TextField("제목을 입력해주세요.", text: $viewModel.titleText)
+                    TextField("가수를 입력해주세요.", text: $viewModel.singerText)
+                    TextField("노래번호를 입력해주세요.", text: $viewModel.noText)
+                }
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding(.horizontal)
+                List {
+                    ForEach(viewModel.songList, id: \.self) { song in
+                        SongListCellView(song: song)
+                            .onAppear {
+                                guard song.no == viewModel.songList.last?.no else { return }
+                                viewModel.loadNextPage = true
+                            }
+                    }
+                    if viewModel.isFooterLoading {
+                        SwiftUIX.ActivityIndicator()
+                    }
+                }
+            }
+            if viewModel.isLoading {
+                SwiftUIX.ActivityIndicator()
             }
         }
     }

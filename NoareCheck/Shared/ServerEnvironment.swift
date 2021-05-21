@@ -12,6 +12,6 @@ final class ServerEnvironment {
     static let shared = ServerEnvironment()
     
     var baseURL: URL {
-        URL(string: "https://api.manana.kr/karaoke")!
+        URL(string: "https://api.manana.kr/v2/karaoke")!
     }
 }

@@ -10,7 +10,7 @@ import Moya
 
 enum KaraokeAPI {
     case brand
-    case songListForTitle(title: String, brand: Brand)
+    case search(no: Int? = nil, title: String? = nil, singer: String? = nil, brand: Brand, page: Int)
 }
 
 extension KaraokeAPI: TargetType {
@@ -22,14 +22,14 @@ extension KaraokeAPI: TargetType {
         switch self {
         case .brand:
             return "/brand.json"
-        case let .songListForTitle(title, _):
-            return "/song/\(title).json"
+        case .search:
+            return "/search.json"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .brand, .songListForTitle:
+        case .brand, .search:
             return .get
         }
     }
@@ -40,9 +40,13 @@ extension KaraokeAPI: TargetType {
 
     var task: Task {
         switch self {
-        case let .songListForTitle(_, brand):
+        case let .search(no, title, singer, brand, page):
             var parameters = [String: Any]()
+            parameters["no"] = no
+            parameters["title"] = title
+            parameters["singer"] = singer
             parameters["brand"] = brand
+            parameters["page"] = page
             return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
         case .brand:
             return .requestPlain

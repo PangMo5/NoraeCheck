@@ -15,13 +15,17 @@ final class AppAssets {
 
     fileprivate var cancellables = Set<AnyCancellable>()
     fileprivate var provider = MoyaProvider<KaraokeAPI>()
-    
+
     var brandList = CurrentValueSubject<[Brand], Never>([])
 
     func refresh() {
         provider.requestPublisher(.brand)
-            .map([Brand].self)
-            .replaceError(with: [])
+            .mapForNC([Brand].self)
+            .catch { error -> AnyPublisher<[Brand], Never> in
+                Toast.showToast(message: error.localizedDescription)
+                return Just([])
+                    .eraseToAnyPublisher()
+            }
             .sink(receiveValue: { [weak self] response in
                 self?.brandList.send(response)
             })
