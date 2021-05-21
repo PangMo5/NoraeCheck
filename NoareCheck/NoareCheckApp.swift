@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct NoareCheckApp: App {
+    init() {
+        UIScrollView.appearance().keyboardDismissMode = .onDrag
+    }
+
     var body: some Scene {
         WindowGroup {
             SplashView()
+                .accentColor(.pink)
         }
     }
 }

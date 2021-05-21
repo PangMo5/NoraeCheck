@@ -14,10 +14,10 @@ struct SplashView: View {
 
     var body: some View {
         if viewModel.isSplashing {
-            Text("SplashView")
+            Text("Noare Check")
                 .padding()
         } else {
-            SearchListContainerView()
+            MainTabView()
         }
     }
 }

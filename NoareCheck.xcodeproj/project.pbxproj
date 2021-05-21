@@ -13,6 +13,7 @@
 		62258C8B26577F9D00E1BE46 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 62258C8A26577F9D00E1BE46 /* SwiftyUserDefaults */; };
 		62258C8D265780FA00E1BE46 /* SwiftEntryKit++.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62258C8C265780FA00E1BE46 /* SwiftEntryKit++.swift */; };
 		62258C8F265781CE00E1BE46 /* Occupiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62258C8E265781CE00E1BE46 /* Occupiable.swift */; };
+		62258C912657980E00E1BE46 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62258C902657980E00E1BE46 /* MainTabView.swift */; };
 		622C46FE264FD032001AA0D5 /* NoareCheckApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C46FD264FD032001AA0D5 /* NoareCheckApp.swift */; };
 		622C4700264FD032001AA0D5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622C46FF264FD032001AA0D5 /* SplashView.swift */; };
 		622C4702264FD033001AA0D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622C4701264FD033001AA0D5 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 		62258C8426577EE400E1BE46 /* Moya+AnyPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+AnyPublisher.swift"; sourceTree = "<group>"; };
 		62258C8C265780FA00E1BE46 /* SwiftEntryKit++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftEntryKit++.swift"; sourceTree = "<group>"; };
 		62258C8E265781CE00E1BE46 /* Occupiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occupiable.swift; sourceTree = "<group>"; };
+		62258C902657980E00E1BE46 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		622C46FA264FD032001AA0D5 /* NoareCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoareCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		622C46FD264FD032001AA0D5 /* NoareCheckApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoareCheckApp.swift; sourceTree = "<group>"; };
 		622C46FF264FD032001AA0D5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				622C46FF264FD032001AA0D5 /* SplashView.swift */,
+				62258C902657980E00E1BE46 /* MainTabView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				62A0441D264FD7D500F67617 /* SearchListContainerViewModel.swift in Sources */,
 				62A0441B264FD6DA00F67617 /* Song.swift in Sources */,
 				622C4700264FD032001AA0D5 /* SplashView.swift in Sources */,
+				62258C912657980E00E1BE46 /* MainTabView.swift in Sources */,
 				62A04422264FD94E00F67617 /* AppAssets.swift in Sources */,
 				62258C8226577DB200E1BE46 /* Common.swift in Sources */,
 				62258C8F265781CE00E1BE46 /* Occupiable.swift in Sources */,

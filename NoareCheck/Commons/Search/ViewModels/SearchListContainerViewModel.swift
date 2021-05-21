@@ -35,22 +35,23 @@ final class SearchListContainerViewModel: ObservableObject {
     @Published
     var singerText = ""
     @Published
-    var selectedBrand = AppAssets.shared.brandList.value[3]
+    var selectedBrand = 0
 
     var cancellables = Set<AnyCancellable>()
 
     init() {
         refresh()
 
-        Publishers.CombineLatest4($noText, $titleText, $singerText, $selectedBrand.compactMap { $0 })
-            .dropFirst()
+        Publishers.CombineLatest4($noText, $titleText, $singerText,
+                                  $selectedBrand.compactMap { AppAssets.shared.brandList.value[safe: $0] })
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .sink(receiveValue: requestSearch)
             .store(in: &cancellables)
 
         $loadNextPage
-            .withLatestFrom(Publishers.CombineLatest4($noText, $titleText, $singerText, $selectedBrand.compactMap { $0 }), $isFooterLoading)
-            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .withLatestFrom(Publishers
+                .CombineLatest4($noText, $titleText, $singerText, $selectedBrand.compactMap { AppAssets.shared.brandList.value[safe: $0] }),
+                $isFooterLoading)
             .sink(receiveValue: { args, isFooterLoading in
                 let (no, title, singer, brand) = args
                 self.loadNextPage(no: no, title: title, singer: singer, brand: brand, isFooterLoading: isFooterLoading)
@@ -69,6 +70,10 @@ final class SearchListContainerViewModel: ObservableObject {
     func refresh() {}
 
     func requestSearch(no: String, title: String, singer: String, brand: Brand) {
+        guard no.isNotEmpty || title.isNotEmpty || singer.isNotEmpty else {
+            songList = []
+            return
+        }
         isLoading = true
         page = 1
         provider.requestPublisher(.search(no: no.int, title: title, singer: singer, brand: brand, page: page))

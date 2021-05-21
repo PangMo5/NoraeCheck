@@ -16,6 +16,8 @@ struct SongListCellView: View {
         HStack(spacing: 16) {
             Text(song.no ?? "")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
+                .minWidth(75)
+            Divider()
             VStack(alignment: .leading) {
                 Text(song.title ?? "")
                     .font(.body)
